@@ -18,6 +18,9 @@ html {
   --footer-hero-background-color: #2f303a;
 
   --card-set-gap: 30px;
+  --duration-effect: 250ms;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1).
+  }
 }
 
 body {
@@ -151,6 +154,8 @@ img {
   margin-left: auto;
 }
 .site-contacts-link {
+  display: flex;
+  align-items: center;
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -165,18 +170,11 @@ img {
 
 /*---------HERO-SECTION--------*/
 
-.hero-title {
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 200px;
-  text-align: center;
-}
-
-.overlay {
+.section-hero {
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)),
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url('../images/hero.jpg');
   background-size: cover;
   text-align: center;
@@ -186,6 +184,10 @@ img {
 
 .hero-title {
   margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 200px;
+  text-align: center;
 
   color: var(--white-text-color);
   font-weight: 900;
@@ -216,9 +218,9 @@ img {
 
 /*-----SKILLS-SECTION----*/
 
-/* .skills {
+.skills {
   padding-bottom: 0;
-} */
+}
 
 .skils-list {
   display: flex;
@@ -288,7 +290,34 @@ img {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
-  letter-spacing: 0.03em;
+}
+
+.specialization-thumb {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.specialization-text {
+  position: absolute;
+  /* top: 50%;
+  left: 50%;
+  tran
+  sform: translate(-50%, -50%); */
+  width: 370px;
+  height: 70px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--white-text-color);
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+.specialization-sub {
+  padding-top: 27px;
 }
 
 /*-----========---TEAM--=====------*/
@@ -317,7 +346,6 @@ img {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
-  letter-spacing: 0.03em;
 }
 
 .team-subtitle {
@@ -381,10 +409,9 @@ img {
   display: flex;
 }
 .clients > .company {
-  display: flex;
   margin-right: 30px;
-  text-align: center;
 }
+
 .clients > .company:last-child {
   margin-right: 0px;
 }
@@ -514,11 +541,17 @@ img {
 .filter-list {
   display: flex;
   justify-content: center;
-  margin-bottom: 34px;
+  margin-bottom: 50px;
 }
 
 .filter-list > .filter-item:not(:last-child) {
   margin-right: 8px;
+}
+
+.filter-item:hover,
+.filter-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .card-set {
@@ -535,9 +568,14 @@ img {
   margin-top: var(--card-set-gap);
 }
 
-.item-card:hover {
+.card-link:focus,
+.card-link:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.card-link {
+  display: inline-block;
 }
 
 .card-content {
