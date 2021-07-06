@@ -19,8 +19,7 @@ html {
 
   --card-set-gap: 30px;
   --duration-effect: 250ms;
-  --timing-function: cubic-bezier(0.4, 0, 0.2, 1).
-  }
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1) .;
 }
 
 body {
